@@ -30,7 +30,7 @@ form {
     padding: 20px;
     width: 400px;
     height: fit-content;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -103,7 +103,7 @@ h1 {
         transform: translateX(0px);
     }
     100% {
-        transform: translateX(180%);
+        transform: translateX(50vw);
     }
 }
 @keyframes twitch-two {
@@ -111,12 +111,12 @@ h1 {
         transform: translateX(0px);
     }
     100% {
-        transform: translateX(-120%);
+        transform: translateX(-40vw);
     }
 }
 @keyframes twitch-three {
     0% {
-        transform: translateX(-120%);
+        transform: translateX(-40vw);
     }
     100% {
         transform: translateX(0px);
@@ -137,4 +137,88 @@ h1 {
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+}
+@media screen and (max-width: 1100px) {
+    @keyframes twitch-one {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(55vw);
+        }
+    }
+    @keyframes twitch-two {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(-40vw);
+        }
+    }
+    @keyframes twitch-three {
+        0% {
+            transform: translateX(-40vw);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+    }
+}
+@media screen and (max-width: 1000px) {
+    @keyframes twitch-one {
+        0% {
+            transform: translateX(0px);
+        }
+    }
+    @keyframes twitch-two {
+        0% {
+            transform: translateX(0px);
+        }
+    }
+    @keyframes twitch-three {
+        0% {
+            transform: translateX(0vw);
+        }
+    }
+    form {
+        min-width: 400px;
+    }
+    main {
+        justify-content: flex-start;
+        padding: 20px;
+    }
+    #right {
+        position: absolute;
+        right: 0;
+    }
+    
+}
+@media screen and (max-width: 750px) {
+    @keyframes twitch-one {
+        0% {
+            transform: translateX(0px);
+        }
+    }
+    @keyframes twitch-two {
+        0% {
+            transform: translateX(0px);
+        }
+    }
+    @keyframes twitch-three {
+        0% {
+            transform: translateX(0vw);
+        }
+    }
+    main {
+        justify-content: center;
+        padding: 20px;
+    }
+    #right {
+        display: none;
+    }
+}
+@media screen and (max-width: 420px) {
+    form {
+        min-width: 300px;
+    }
 }
