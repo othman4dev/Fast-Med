@@ -1,0 +1,38 @@
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search_box {
+  position: relative;
+}
+.search_box img {
+  position: absolute;
+  width: 16px;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.search_box input {
+  width: 400px;
+  padding-left: 35px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  justify-content: space-between;
+  column-gap: 1rem;
+  row-gap: 2rem;
+}
+.cards .item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.cards .item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.hidden {
+  display: none;
+}

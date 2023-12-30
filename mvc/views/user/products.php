@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="user/assets/css/owl.css">
   <link rel="stylesheet" href="user/assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="user/assets/css/style.css">
   <!--
 
 TemplateMo 582 Tale SEO Agency
@@ -109,168 +110,62 @@ https://templatemo.com/tm-582-tale-seo-agency
   </header>
   <div class="projects section" id="projects">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="section-heading">
-            <h2>Discover Our <em>Products </em> &amp; <span>Medications</span></h2>
-            <div class="line-dec"></div>
-            <p>Find Best Quality Medications</p>
+      <div class="section-heading">
+        <h2>Discover Our <em>Products </em> &amp; <span>Medications</span></h2>
+        <div class="line-dec"></div>
+        <div class="search">
+          <p>Find Best Quality Medications</p>
+          <div class="search_box">
+            <img src="user/assets/images/search.svg" alt="search_icon">
+            <input type="search" class="form-control" oninput="search(event)">
           </div>
         </div>
       </div>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-features owl-carousel">
-            <div class="item">
-              <img src="user/assets/images/projects-01.jpg" alt="">
-              <div class="down-content">
-                <h4>Digital Agency HTML Templates</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-02.jpg" alt="">
-              <div class="down-content">
-                <h4>Admin Dashboard CSS Templates</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Best Responsive Website Layouts</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-04.jpg" alt="">
-              <div class="down-content">
-                <h4>HTML CSS Layouts for your websites</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-02.jpg" alt="">
-              <div class="down-content">
-                <h4>Bootstrap 5 Themes for Free</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Mobile Friendly Website Layouts</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-          </div>
+    <div class="container">
+      <div class="cards">
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOTSTRAP MODAL : -->
+  <!-- Button trigger modal -->
+  <button type="button" id="modal_btn" class="btn btn-primary hidden" data-bs-toggle="modal" data-bs-target="#medicamentModal">
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="medicamentModal" tabindex="-1" aria-labelledby="medicamentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="medicamentModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4></h4>
+          <p></p>
+          <span></span>
+          <input type="hidden" id="med_id">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" onclick="buy(event)">Buy Now</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="projects section" id="projects">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-features owl-carousel">
-            <div class="item">
-              <img src="user/assets/images/projects-01.jpg" alt="">
-              <div class="down-content">
-                <h4>Digital Agency HTML Templates</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-02.jpg" alt="">
-              <div class="down-content">
-                <h4>Admin Dashboard CSS Templates</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Best Responsive Website Layouts</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-04.jpg" alt="">
-              <div class="down-content">
-                <h4>HTML CSS Layouts for your websites</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-02.jpg" alt="">
-              <div class="down-content">
-                <h4>Bootstrap 5 Themes for Free</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Mobile Friendly Website Layouts</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+
+  <!-- BOOTSTRAP TOAST : -->
+  <!-- <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button> -->
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Bootstrap</strong>
+        <small>11 mins ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
-    </div>
-  </div>
-  <div class="projects section" id="projects">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="owl-features owl-carousel">
-            <div class="item">
-              <img src="user/assets/images/projects-01.jpg" alt="">
-              <div class="down-content">
-                <h4>Digital Agency HTML Templates</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-02.jpg" alt="">
-              <div class="down-content">
-                <h4>Admin Dashboard CSS Templates</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Best Responsive Website Layouts</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-04.jpg" alt="">
-              <div class="down-content">
-                <h4>HTML CSS Layouts for your websites</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-02.jpg" alt="">
-              <div class="down-content">
-                <h4>Bootstrap 5 Themes for Free</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-            <div class="item">
-              <img src="user/assets/images/projects-03.jpg" alt="">
-              <div class="down-content">
-                <h4>Mobile Friendly Website Layouts</h4>
-                <a href="#"><i class="fa fa-link"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="toast-body">
       </div>
     </div>
   </div>
@@ -294,10 +189,87 @@ https://templatemo.com/tm-582-tale-seo-agency
   <script src="user/vendor/bootstrap/js/bootstrap.min.js"></script>
 
   <script src="user/assets/js/isotope.min.js"></script>
-  <script src="user/assets/js/owl-carousel.js"></script>
+  <!-- <script src="user/assets/js/owl-carousel.js"></script> -->
   <script src="user/assets/js/tabs.js"></script>
   <script src="user/assets/js/popup.js"></script>
   <script src="user/assets/js/custom.js"></script>
+
+  <script>
+    const cards = document.querySelector('.cards');
+    const toastBody = document.querySelector('.toast-body');
+    const toast = new bootstrap.Toast(document.getElementById('liveToast'));
+    const modal = new bootstrap.Modal(document.getElementById('medicamentModal'));
+    // Modal Elements :
+    const modalH4 = document.querySelector('.modal-body h4');
+    const modalP = document.querySelector('.modal-body p');
+    const modalSpan = document.querySelector('.modal-body span');
+    const ModalInput = document.getElementById('med_id');
+
+    async function showModal(e) {
+      const medId = e.currentTarget.querySelector('.med_id').value;
+      const res = await fetch('/medicament', {
+        method: 'POST',
+        headers: {
+          "Content-Type": "Application/json"
+        },
+        body: JSON.stringify({
+          med_id: medId
+        })
+      })
+      const results = await res.json();
+
+      // load data to modal :
+      modalH4.textContent = results.name;
+      modalP.textContent = results.description;
+      modalSpan.textContent = results.price;
+      ModalInput.value = results.med_id;
+
+      modal.show();
+    }
+
+    const loadHTML = (data) => {
+      return `
+        <div class="item" onclick="showModal(event)">
+            <img src="user/assets/images/med2.jpg" alt="">
+            <div class="down-content">
+              <h4>${data.name}</h4>
+              <span>${data.price} DH</span>
+              <input class="med_id" type="hidden" value="${data.med_id}">
+            </div>
+        </div>
+      `
+    }
+
+    async function search(e = {}) {
+      cards.innerHTML = '';
+      name = e.currentTarget?.value || '';
+      const res = await fetch(`/search?name=${name}`);
+      const results = await res.json();
+      results.forEach(item => cards.insertAdjacentHTML('beforeend', loadHTML(item)));
+    }
+    search();
+
+    async function buy(e) {
+      const medId = ModalInput.value;
+      const res = await fetch('/buy', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: medId
+        })
+      });
+      const result = await res.json();
+      toastBody.textContent = result.msg;
+
+      // Close Toast :
+      modal.hide();
+
+      // Show Toast :
+      toast.show();
+    }
+  </script>
 
 
 </body>
