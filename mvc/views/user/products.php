@@ -138,7 +138,7 @@ https://templatemo.com/tm-582-tale-seo-agency
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="medicamentModalLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="medicamentModalLabel">Medicament Info</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -174,9 +174,7 @@ https://templatemo.com/tm-582-tale-seo-agency
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 <a href="#">Tale SEO Agency</a>. All rights reserved.
-
-          <br>Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a>
+        <p>Copyright © 2024. All rights reserved.
         </p>
       </div>
     </div>
