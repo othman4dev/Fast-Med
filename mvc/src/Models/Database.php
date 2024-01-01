@@ -1,15 +1,17 @@
 <?php
 
-namespace Src\model;
+namespace App\models;
 
 class Database
 {
-    public static $db;
+    private static $db;
 
     public static function connect()
     {
         try {
-            self::$db = new \PDO('mysql:host=localhost;user=root;dbname=pharmacie');
+            self::$db = new \PDO('mysql:host=localhost;dbname=pharmacie', 'root', '');
+            // Configure PDO to throw exceptions
+            self::$db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             return self::$db;
         } catch (\PDOException $e) {
             echo "Connection failed: " . $e->getMessage();

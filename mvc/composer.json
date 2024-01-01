@@ -2,7 +2,7 @@
   "name": "youcode/simple-php-mvc-starter",
   "autoload": {
     "psr-4": {
-      "App\\": "src/"
+      "App\\": "mvc/src/"
     }
   },
   "authors": [

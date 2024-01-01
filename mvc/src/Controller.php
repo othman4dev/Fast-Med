@@ -9,6 +9,7 @@ class Controller
         extract($data);
 
         // include "Views/$view.php";
-        include "../views/$view.php";
+        include __DIR__."/../views/$view.php";
     }
 }
+?>

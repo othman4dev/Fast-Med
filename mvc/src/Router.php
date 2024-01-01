@@ -4,7 +4,11 @@ namespace App;
 
 class Router
 {
-    protected $routes = [];
+    protected $routes = [
+        // "get" => [
+        //     '/' => ["homecontroller", index]
+        // ]
+    ];
 
     private function addRoute($route, $controller, $action, $method)
     {
