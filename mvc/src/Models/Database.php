@@ -1,6 +1,6 @@
 <?php
 
-namespace App\model;
+namespace App\Models;
 
 class Database
 {
@@ -9,7 +9,7 @@ class Database
     public static function connect()
     {
         try {
-            self::$db = new \PDO('mysql:host=localhost;user=root;dbname=pharmacie');
+            self::$db = new \PDO("mysql:host={$_ENV['HOST']};user={$_ENV['USER']};dbname={$_ENV['DB_NAME']}");
             return self::$db;
         } catch (\PDOException $e) {
             echo "Connection failed: " . $e->getMessage();
