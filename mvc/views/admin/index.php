@@ -18,27 +18,24 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="admin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="admin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="admin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="admin/assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Nov 17 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+
+
 </head>
 
 <body>
+
+  <h1>___________________________________________________________________________________________________________</h1>
 
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
@@ -276,7 +273,7 @@
       <li class="nav-item">
         <a class="nav-link " href="index.php">
           <i class="bi bi-grid"></i>
-          <span>Statistiques  </span>
+          <span>Statistiques </span>
         </a>
       </li>
       <li class="nav-item">
@@ -301,6 +298,7 @@
 
   </aside>
 
+
   <main id="main" class="main">
 
     <div class="pagetitle">
@@ -313,7 +311,34 @@
       </nav>
     </div>
     <section class="section dashboard">
-<!--Content  ------------------------------------------------>
+      <!--Content  ------------------------------------------------>
+
+
+
+      <section class="Agents px-4">
+        <table class="agent table align-middle bg-white" style="min-width: 700px;">
+          <thead class="bg-light">
+            <tr>
+              <th>User ID</th>
+              <th>User Name</th>
+              <th>Email</th>
+
+              <th>Role</th>
+
+            </tr>
+          <tbody>
+
+
+
+
+
+
+
+          </tbody>
+        </table>
+
+
+      </section>
 
 
 
@@ -324,10 +349,7 @@
 
 
 
-
-
-
-<!--Content  ------------------------------------------------>
+      <!--Content  ------------------------------------------------>
     </section>
   </main>
   <!-- ======= Footer ======= -->
@@ -336,7 +358,7 @@
       &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
-     Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
     </div>
   </footer>
   <!-- Vendor JS Files -->
@@ -348,7 +370,7 @@
     <script src="assets/vendor/quill/quill.min.js"></script>
     <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
     <script src="assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>  
+    <script src="assets/vendor/php-email-form/validate.js"></script>
   </div>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
