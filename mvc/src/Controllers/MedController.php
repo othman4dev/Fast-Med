@@ -42,6 +42,9 @@ class MedController
         # add vente :
         VenteEnLign::add($med_id, date('Y-m-d H:i:s'), $user_id);
 
+        # Reduce Quantity :
+        Medicament::reduceQuantity($med_id);
+
         # get medicament info :
         $med = Medicament::fetchOne($med_id);
         echo json_encode(["msg" => "Achat succesful", "data" => $med]);
