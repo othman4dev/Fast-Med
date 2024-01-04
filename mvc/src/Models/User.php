@@ -4,9 +4,9 @@ namespace App\Models;
 
 class User
 {
-    public $name;
-    public $email;
-    public $role;
+    // public $name;
+    // public $email;
+    // public $role;
     public static function  select_users()
     {
         $db = Database::connect();
@@ -32,7 +32,7 @@ class User
         Database::close();
         return $query;
     }
-    public function slect($id)
+    public function select($id)
     {
         $db = Database::connect();
         $querySelect = $db->prepare('SELECT * from user where user_id=?');

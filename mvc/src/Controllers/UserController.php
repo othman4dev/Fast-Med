@@ -25,7 +25,7 @@ class UserController
             }
         } elseif (isset($_POST['update_user'])) {
             $select = new User();
-            $result = $select->select_users($_POST['id']);
+            $result = $select->select($_POST['id']);
             // print_r($result[0]['username']);
             // die();
             require __DIR__ . '/../../views/admin/update.php';

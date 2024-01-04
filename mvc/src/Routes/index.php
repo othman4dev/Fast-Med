@@ -15,8 +15,8 @@ $router->post('/buy', MedController::class, 'buy');
 $router->get('/home', UserController::class, 'home');
 $router->post('/delete', UserController::class, 'delete');
 $router->post('/add_user', UserController::class, 'add_user');
-$router->get('/update_user', UserController::class, 'update_user');
 $router->post('/update', UserController::class, 'update');
+
 
 
 
