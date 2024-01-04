@@ -39,13 +39,11 @@ class MedController
         $med_id = json_decode(file_get_contents('php://input'))->id;
         $user_id = $_SESSION['id'] ?? 1;
 
-        # Check if exist :
-        $result = VenteEnLign::fetchOne($med_id, $user_id);
+        # add vente :
+        VenteEnLign::add($med_id, date('Y-m-d H:i:s'), $user_id);
 
-        if ($result) echo json_encode(["msg" => 'Already Exist']);
-        else {
-            VenteEnLign::add($med_id, date('Y-m-d'), $user_id);
-            echo json_encode(["msg" => 'Operation Success']);
-        }
+        # get medicament info :
+        $med = Medicament::fetchOne($med_id);
+        echo json_encode(["msg" => "Achat succesful", "data" => $med]);
     }
 }

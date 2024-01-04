@@ -248,12 +248,47 @@ https://templatemo.com/tm-582-tale-seo-agency
     }
     search();
 
-    function venteHTML() {
+    function bonsTemp(name, desc, price) {
       return `
-        <div>
-          <h1>Vente Name</h1>
-          <p>Your achat success</p>
+      <div class="container mt-4">
+        <h1 class="text-primary">Bon de commande</h1>
+        <hr class="text-primary">
+        <div class="head">
+            <h3 class="fs-5">Fast-Med</h3>
+            22, Avenue Voltaire
+            <br>
+            13000 Marselle, France
+            <br>
+            Telephone: +33 4 92 99 99 99
+            <br>
+            <h4 class="fs-5 mt-4">Informations Additionnelles</h4>
+            <p class="m-0">Merci d'avoir choisi Mon Entreprise pour nos services</p>
+            <p>Service apres-vente - Garante: 1 an</p>
         </div>
+        <hr class="text-primary">
+        <div class="body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Description</th>
+                        <th>Qunatite</th>
+                        <th>Prix unitaire</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${name}</td>
+                        <td>${desc}</td>
+                        <td>1</td>
+                        <td>${price}</td>
+                        <td>${price}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
       `
     }
 
@@ -278,7 +313,23 @@ https://templatemo.com/tm-582-tale-seo-agency
       toast.show();
 
       // Generate PDF :
-      html2pdf().from(venteHTML()).save();
+      const opt = {
+        margin: 1,
+        filename: 'bons-achat.pdf',
+        image: {
+          type: 'jpeg',
+          quality: 0.98
+        },
+        html2canvas: {
+          scale: 2
+        },
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait'
+        }
+      };
+      html2pdf().set(opt).from(bonsTemp(result.data.name, result.data.description, result.data.price)).save();
     }
   </script>
 
