@@ -4,7 +4,7 @@ namespace App;
 
 class Controller
 {
-    protected function render($view, $data = [])
+    public static function render($view, $data = [])
     {
         extract($data);
 
