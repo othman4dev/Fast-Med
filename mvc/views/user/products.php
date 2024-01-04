@@ -191,6 +191,7 @@ https://templatemo.com/tm-582-tale-seo-agency
   <script src="user/assets/js/tabs.js"></script>
   <script src="user/assets/js/popup.js"></script>
   <script src="user/assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
     const cards = document.querySelector('.cards');
@@ -247,6 +248,15 @@ https://templatemo.com/tm-582-tale-seo-agency
     }
     search();
 
+    function venteHTML() {
+      return `
+        <div>
+          <h1>Vente Name</h1>
+          <p>Your achat success</p>
+        </div>
+      `
+    }
+
     async function buy(e) {
       const medId = ModalInput.value;
       const res = await fetch('/buy', {
@@ -266,6 +276,9 @@ https://templatemo.com/tm-582-tale-seo-agency
 
       // Show Toast :
       toast.show();
+
+      // Generate PDF :
+      html2pdf().from(venteHTML()).save();
     }
   </script>
 
