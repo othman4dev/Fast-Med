@@ -32,4 +32,20 @@ class User
         Database::close();
         return $query;
     }
+    public function slect($id)
+    {
+        $db = Database::connect();
+        $querySelect = $db->prepare('SELECT * from user where user_id=?');
+        $querySelect->execute([$id]);
+        Database::close();
+        return $querySelect->fetchAll(\PDO::FETCH_ASSOC);
+    }
+    public function update($id, $email, $username, $role)
+    {
+        $db = Database::connect();
+        $update = $db->prepare('UPDATE user set email=?,role=?,username=? where user_id=?');
+        $update->execute([$email, $role, $username, $id]);
+        Database::close();
+        return $update;
+    }
 }

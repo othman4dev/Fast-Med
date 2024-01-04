@@ -19,13 +19,13 @@
 
   <!-- Vendor CSS Files -->
   <link href="../admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../adminassets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../adminassets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../adminassets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../adminassets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="../adminassets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="../adminassets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="../adminassets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="../admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../admina/ssets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../admina/ssets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../admina/ssets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="../admina/ssets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="../admina/ssets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="../admina/ssets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="../admin/assets/css/style.css" rel="stylesheet">
@@ -349,7 +349,7 @@
                 <label for="">role</label>
                 <select name="role" id="">
                   <option value="admin">admin</option>
-                  <option value="patient_en_ling">patient_en_ling</option>
+                  <option value="patient_en_lign">patient_en_lign</option>
                   <option value="patient_en_magasin">patient_en_magasin</option>
                 </select>
               </div>
@@ -409,7 +409,7 @@
                 <input type="hidden" value="<?php echo $result['user_id'] ?>">
 
 
-                <button type="submit">edit</button>
+                <button type="submit" name="update_user">edit</button>
               </td>
               <td class="f_position">
                 <input type="hidden" name='id' value="<?php echo $result['user_id'] ?>">
