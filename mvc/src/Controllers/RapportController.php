@@ -20,6 +20,9 @@ class RapportController {
         $dompdf->stream($filename);
         Controller::render('admin/'.$randerView,$data);
     }
+    public function index(){
+        Controller::render('admin/Rapport');
+    }
     public function getRapportVent() {
         $this->generateRapport(RapportVent::class,'getAllVents','vents','ventRapport','vent');
     }

@@ -11,6 +11,7 @@ $router->post('/medicament', MedController::class, 'getMedicament');
 $router->get('/search', MedController::class, 'search');
 $router->post('/buy', MedController::class, 'buy');
 
+$router->get('/', RapportController::class, 'index');
 $router->get('/RaportVent', RapportController::class,'getRapportVent');
 $router->get('/RapportStock', RapportController::class,'getRapportStock');
 
