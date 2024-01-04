@@ -20,4 +20,11 @@ class Medicament
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
         Database::close();
     }
+    public function allMedicament(){
+        $db = Database::connect();
+        $stmt=$db->prepare("SELECT * FROM medicament");
+        $stmt->execute();
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $result;
+    }
 }

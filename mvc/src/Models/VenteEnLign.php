@@ -21,3 +21,4 @@ class VenteEnLign extends Vente
         Database::close();
     }
 }
+;
