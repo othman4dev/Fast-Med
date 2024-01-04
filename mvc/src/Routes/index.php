@@ -4,6 +4,7 @@ use App\Controllers\Authentification;
 use App\Controllers\MedController;
 use App\Controllers\HomeController;
 use App\Controllers\VenteController;
+use App\Controllers\RapportController;
 use App\Router;
 
 $router = new Router();
@@ -25,5 +26,7 @@ $router->get('/ajoutUserEnmagasin', VenteController::class, 'ventEnMagasinIndex'
 $router->post('/insert', HomeController::class, 'insert');
 $router->post('/newVenteMagasin', VenteController::class, 'addVentEnMagasin');
 
+$router->get('/RaportVent', RapportController::class,'getRapportVent');
+$router->get('/RapportStock', RapportController::class,'getRapportStock');
 
 $router->dispatch();
