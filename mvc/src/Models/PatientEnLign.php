@@ -11,6 +11,7 @@ class PatientEnLign extends Patient implements Authenticable{
         if ($user && password_verify($password, $user["password"])) {
             $_SESSION['id'] = $user['user_id'];
             $_SESSION['role_user'] = $user['role'];
+           
             Database::close();
             return true;
             // if ($user['role'] == 'admin') {

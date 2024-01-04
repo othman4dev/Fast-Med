@@ -91,7 +91,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                       <li class="has-sub">
                           <a href="javascript:void(0)">Pages</a>
                           <ul class="sub-menu">
-                              <li><a href="about.html">About Us</a></li>
+                              <li><a href="/medicaments">Medicament</a></li>
                               <li><a href="faqs.html">FAQs</a></li>
                           </ul>
                       </li>

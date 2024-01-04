@@ -10,24 +10,24 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="admin1/assets/img/favicon.png" rel="icon">
-  <link href="admin1/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="admin/assets/img/favicon.png" rel="icon">
+  <link href="admin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="admin1/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="admin1/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="admin1/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="admin1/assets/vendor/quill/quill.snow.css" rel="stylesheet">
-  <link href="admin1/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
-  <link href="admin1/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="admin1/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="admin/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="admin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="admin/assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="admin1/assets/css/style.css" rel="stylesheet">
+  <link href="admin/assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin
@@ -44,7 +44,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="admin1/assets/img/logo.png" alt="">
+        <img src="admin/assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">NiceAdmin</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -159,7 +159,7 @@
 
             <li class="message-item">
               <a href="#">
-                <img src="admin1/assets/img/messages-1.jpg" alt="" class="rounded-circle">
+                <img src="admin/assets/img/messages-1.jpg" alt="" class="rounded-circle">
                 <div>
                   <h4>Maria Hudson</h4>
                   <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -173,7 +173,7 @@
 
             <li class="message-item">
               <a href="#">
-                <img src="admin1/assets/img/messages-2.jpg" alt="" class="rounded-circle">
+                <img src="admin/assets/img/messages-2.jpg" alt="" class="rounded-circle">
                 <div>
                   <h4>Anna Nelson</h4>
                   <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -187,7 +187,7 @@
 
             <li class="message-item">
               <a href="#">
-                <img src="admin1/assets/img/messages-3.jpg" alt="" class="rounded-circle">
+                <img src="admin/assets/img/messages-3.jpg" alt="" class="rounded-circle">
                 <div>
                   <h4>David Muldon</h4>
                   <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -210,7 +210,7 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="admin1/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="admin/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -274,27 +274,27 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="/">
+        <a class="nav-link " href="index.php">
           <i class="bi bi-grid"></i>
           <span>Statistiques  </span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="/ajoutUserEnmagasin">
+        <a class="nav-link collapsed" href="cours.php">
           <i class="bi bi-grid"></i>
-          <span>Gestion User</span>
+          <span>Gestion des Cours</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="QuesRepo.php">
           <i class="bi bi-grid"></i>
-          <span>Gestion Medicament</span>
+          <span>Questions & Réponses </span>
         </a>
       </li>
       <li class="nav-item ">
         <a class="nav-link collapsed" href="utlisateurs.php">
           <i class="bi bi-grid"></i>
-          <span>Gestion Vent </span>
+          <span>Gestion des Utilisateurs </span>
         </a>
       </li>
     </ul>
@@ -317,20 +317,6 @@
 
 
 
-<a href="/RaportVent" class="btn btn-primary">Raport Vent</a>
-
-<a href="/RapportStock" class="btn btn-primary">Rapport Stock</a>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -349,18 +335,18 @@
   </footer>
   <!-- Vendor JS Files -->
   <div class="script">
-    <script src="admin1/assets/vendor/apexcharts/apexcharts.min.js"></script>
-    <script src="admin1/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="admin1/assets/vendor/chart.js/chart.umd.js"></script>
-    <script src="admin1/assets/vendor/echarts/echarts.min.js"></script>
-    <script src="admin1/assets/vendor/quill/quill.min.js"></script>
-    <script src="admin1/assets/vendor/simple-datatables/simple-datatables.js"></script>
-    <script src="admin1/assets/vendor/tinymce/tinymce.min.js"></script>
-    <script src="admin1/assets/vendor/php-email-form/validate.js"></script>  
+    <script src="admin/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="admin/assets/vendor/chart.js/chart.umd.js"></script>
+    <script src="admin/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="admin/assets/vendor/quill/quill.min.js"></script>
+    <script src="admin/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="admin/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="admin/assets/vendor/php-email-form/validate.js"></script>  
   </div>
   <!-- Template Main JS File -->
-  <script src="admin1/assets/js/main.js"></script>
+  <script src="admin/assets/js/main.js"></script>
 
 </body>
 
-</html>
+</html> 

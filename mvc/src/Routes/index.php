@@ -14,6 +14,7 @@ $router->post('/medicament', MedController::class, 'getMedicament');
 $router->get('/search', MedController::class, 'search');
 $router->post('/buy', MedController::class, 'buy');
 
+
 $router->get('/', HomeController::class, 'index');
 $router->get('/admin', HomeController::class, 'index');
 $router->post('/register', Authentification::class, 'register');

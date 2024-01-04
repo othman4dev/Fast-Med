@@ -22,7 +22,7 @@ class Authentification extends Controller
             $result = PatientEnLign::login($email, $password);
             if($result)
             HomeController::index();
-        else Controller::render('login');
+            else Controller::render('login');
 
         }
 
