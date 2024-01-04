@@ -25,6 +25,8 @@ class MedController
         echo json_encode($medicament);
     }
 
+ 
+
     public function search()
     {
         $this->setJsonHeader();
