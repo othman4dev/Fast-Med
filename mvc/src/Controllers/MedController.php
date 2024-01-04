@@ -48,4 +48,5 @@ class MedController
             echo json_encode(["msg" => 'Operation Success']);
         }
     }
+
 }
