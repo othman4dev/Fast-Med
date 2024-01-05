@@ -256,7 +256,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="scripte.php?log_out=ok">
+              <a class="dropdown-item d-flex align-items-center" href="/logout">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -403,12 +403,12 @@
                 <input type="hidden" value="<?php echo $result['user_id'] ?>">
 
 
-                <button type="submit" name="update_user">edit</button>
+                <button type="submit" class="btn btn-primary" name="update_user">edit</button>
               </td>
               <td class="f_position">
                 <input type="hidden" name='id' value="<?php echo $result['user_id'] ?>">
 
-                <button type="submit" name='delete'>delete</button>
+                <button type="submit" class="btn btn-danger" name='delete'>delete</button>
               </td>
             </form>
           </tr>
