@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\Controller;
 use App\Controllers\HomeController;
 use App\Models\PatientEnLign;
-use App\Models\UserModel;
 
 class Authentification extends Controller
 {
