@@ -20,6 +20,10 @@ class HomeController extends Controller
                 Controller::render('index', $data);
         } else Controller::render('index', $data);
     }
+    public function logout(){
+        session_destroy();
+        header('location:/');
+    }
 
     public function insert()
     {
