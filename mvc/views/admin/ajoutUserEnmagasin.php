@@ -15,9 +15,7 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="admin1/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -278,31 +276,25 @@
             <li class="nav-item">
                 <a class="nav-link " href="/">
                     <i class="bi bi-grid"></i>
-                    <span>Statistiques </span>
+                    <span>Gestion User </span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="cours.php">
+                <a class="nav-link collapsed" href="/ajoutUserEnmagasin">
                     <i class="bi bi-grid"></i>
-                    <span>Gestion des Cours</span>
+                    <span>Add User Magasin</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" href="QuesRepo.php">
                     <i class="bi bi-grid"></i>
-                    <span>Questions & Réponses </span>
+                    <span>Gestion Medicament</span>
                 </a>
             </li>
             <li class="nav-item ">
                 <a class="nav-link collapsed" href="utlisateurs.php">
                     <i class="bi bi-grid"></i>
-                    <span>Gestion des Utilisateurs </span>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link collapsed" href="ajoutUserEnmagasin.php">
-                    <i class="bi bi-grid"></i>
-                    <span>Ajout User En Magasin</span>
+                    <span>Gestion Vent </span>
                 </a>
             </li>
         </ul>
@@ -311,7 +303,7 @@
 
     <main id="main" class="main">
 
-       
+
         <section class="section dashboard">
             <!--Content  ------------------------------------------------>
 
@@ -327,12 +319,12 @@
                     </div>
 
                     <div class="mb-3">
-                   
+
                         <select class="form-select" aria-label="Default select example" name="med_name">
                             <option selected>selectionner un médicament</option>
-                            <?php foreach($medicaments as $item): ?>
-                            <?php 
-                            /*
+                            <?php foreach ($medicaments as $item) : ?>
+                                <?php
+                                /*
                             $medicaments = [
                                 ["med_id" => 1, "name" => "Medicament"], item
                                 ["med_id" => 1, "name" => "Medicament"], item
@@ -340,9 +332,9 @@
                                 ["med_id" => 1, "name" => "Medicament"], item
                             ]
                             */
-                            ?>
-                            <option value=" <?php echo $item['med_id']?>"> <?php echo $item['name']?></option>
-                            <?php 
+                                ?>
+                                <option value=" <?php echo $item['med_id'] ?>"> <?php echo $item['name'] ?></option>
+                            <?php
                             endforeach;
                             ?>
                         </select>
