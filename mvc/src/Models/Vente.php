@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Models;
-
 class Vente
 {
-    public static function add($med_id, $date, $user_id)
-    {
+    public function getAllVents(){
+        $db = Database::connect();
+        $stmt=$db->prepare("SELECT * FROM user NATURAL JOIN vente NATURAL JOIN medicament");
+        $stmt->execute();
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        return $result;
     }
 }

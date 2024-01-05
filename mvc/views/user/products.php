@@ -92,12 +92,25 @@ https://templatemo.com/tm-582-tale-seo-agency
               <li class="has-sub">
                 <a href="javascript:void(0)">Pages</a>
                 <ul class="sub-menu">
-                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="/medicaments">Medicament</a></li>
                   <li><a href="faqs.html">FAQs</a></li>
                 </ul>
               </li>
               <li class="scroll-to-section"><a href="#infos">Infos</a></li>
-              <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+              <?php
+                if(isset($_SESSION['id'])){
+                  ?> 
+                    <li class="scroll-to-section"><a href="/logout">Logout</a></li>
+                  <?php
+                }else{
+                  ?>
+                    <li class="scroll-to-section"><a href="/login">Login</a></li>
+                  <?php
+                }
+                
+                
+                
+                ?>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
@@ -162,7 +175,7 @@ https://templatemo.com/tm-582-tale-seo-agency
     <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
         <strong class="me-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
+        <small>just now</small>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
       </div>
       <div class="toast-body">
@@ -191,6 +204,7 @@ https://templatemo.com/tm-582-tale-seo-agency
   <script src="user/assets/js/tabs.js"></script>
   <script src="user/assets/js/popup.js"></script>
   <script src="user/assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
     const cards = document.querySelector('.cards');
@@ -247,6 +261,50 @@ https://templatemo.com/tm-582-tale-seo-agency
     }
     search();
 
+    function bonsTemp(name, desc, price) {
+      return `
+      <div class="container mt-4">
+        <h1 class="text-primary">Bon de commande</h1>
+        <hr class="text-primary">
+        <div class="head">
+            <h3 class="fs-5">Fast-Med</h3>
+            22, Avenue Voltaire
+            <br>
+            13000 Marselle, France
+            <br>
+            Telephone: +33 4 92 99 99 99
+            <br>
+            <h4 class="fs-5 mt-4">Informations Additionnelles</h4>
+            <p class="m-0">Merci d'avoir choisi Mon Entreprise pour nos services</p>
+            <p>Service apres-vente - Garante: 1 an</p>
+        </div>
+        <hr class="text-primary">
+        <div class="body">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Produit</th>
+                        <th>Description</th>
+                        <th>Qunatite</th>
+                        <th>Prix unitaire</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>${name}</td>
+                        <td>${desc}</td>
+                        <td>1</td>
+                        <td>${price}</td>
+                        <td>${price}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+      `
+    }
+
     async function buy(e) {
       const medId = ModalInput.value;
       const res = await fetch('/buy', {
@@ -266,6 +324,25 @@ https://templatemo.com/tm-582-tale-seo-agency
 
       // Show Toast :
       toast.show();
+
+      // Generate PDF :
+      const opt = {
+        margin: 1,
+        filename: 'bons-achat.pdf',
+        image: {
+          type: 'jpeg',
+          quality: 0.98
+        },
+        html2canvas: {
+          scale: 2
+        },
+        jsPDF: {
+          unit: 'in',
+          format: 'letter',
+          orientation: 'portrait'
+        }
+      };
+      html2pdf().set(opt).from(bonsTemp(result.data.name, result.data.description, result.data.price)).save();
     }
   </script>
 
