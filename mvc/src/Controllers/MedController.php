@@ -25,6 +25,8 @@ class MedController
         echo json_encode($medicament);
     }
 
+ 
+
     public function search()
     {
         $this->setJsonHeader();
@@ -49,4 +51,5 @@ class MedController
         $med = Medicament::fetchOne($med_id);
         echo json_encode(["msg" => "Achat succesful", "data" => $med]);
     }
+
 }

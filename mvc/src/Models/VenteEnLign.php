@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class VenteEnLign extends Vente
+class VenteEnLign extends Vente 
 {
     public static function fetchOne($med_id, $user_id)
     {
@@ -21,3 +21,4 @@ class VenteEnLign extends Vente
         $stmt->execute([$med_id, $date, $user_id]);
     }
 }
+l;

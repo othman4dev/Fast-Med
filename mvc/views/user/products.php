@@ -92,12 +92,25 @@ https://templatemo.com/tm-582-tale-seo-agency
               <li class="has-sub">
                 <a href="javascript:void(0)">Pages</a>
                 <ul class="sub-menu">
-                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="/medicaments">Medicament</a></li>
                   <li><a href="faqs.html">FAQs</a></li>
                 </ul>
               </li>
               <li class="scroll-to-section"><a href="#infos">Infos</a></li>
-              <li class="scroll-to-section"><a href="#contact">Contact</a></li>
+              <?php
+                if(isset($_SESSION['id'])){
+                  ?> 
+                    <li class="scroll-to-section"><a href="/logout">Logout</a></li>
+                  <?php
+                }else{
+                  ?>
+                    <li class="scroll-to-section"><a href="/login">Login</a></li>
+                  <?php
+                }
+                
+                
+                
+                ?>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
