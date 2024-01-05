@@ -22,14 +22,20 @@ class Router
         $this->addRoute($route, $controller, $action, "POST");
     }
 
+
     public function dispatch()
     {
         $uri = strtok($_SERVER['REQUEST_URI'], '?');
         $method =  $_SERVER['REQUEST_METHOD'];
+        $method =  $_SERVER['REQUEST_METHOD'];
+
+        // var_dump($this->routes[$method]);
+        // die();
 
         if (array_key_exists($uri, $this->routes[$method])) {
             $controller = $this->routes[$method][$uri]['controller'];
             $action = $this->routes[$method][$uri]['action'];
+
 
             $controller = new $controller();
             $controller->$action();
