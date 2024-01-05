@@ -10,8 +10,7 @@ class Medicament
         $stmt = $db->prepare('SELECT * FROM medicament WHERE med_id = ?');
         $stmt->execute([$id]);
         Database::close();
-        return $stmt->fetch(\PDO::FETCH_ASSOC);
-       
+        return $stmt->fetch(\PDO::FETCH_ASSOC);       
     }
     public static function fetchAll()
     {
@@ -28,7 +27,13 @@ class Medicament
         $stmt->execute(["%$name%"]);
         Database::close();
         return $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        
+    }
+    public static function reduceQuantity($id)
+    {
+        $db = Database::connect();
+        $stmt = $db->prepare('UPDATE medicament SET quantity = quantity - 1 WHERE med_id = ?');
+        $stmt->execute([$id]);
+        Database::close();
     }
     public function allMedicament(){
         $db = Database::connect();

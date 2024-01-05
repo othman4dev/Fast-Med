@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class VenteEnLign extends Vente 
+class VenteEnLign extends Vente
 {
     public static function fetchOne($med_id, $user_id)
     {
@@ -11,15 +11,13 @@ class VenteEnLign extends Vente
         $stmt->execute([$med_id, $user_id]);
         Database::close();
         return $stmt->fetch(\PDO::FETCH_ASSOC);
-      
     }
 
     public static function add($med_id, $date, $user_id)
     {
         $db = Database::connect();
         $stmt = $db->prepare("INSERT INTO vente VALUES (NULL, ?, ?, ?, 'en_lign')");
-        $stmt->execute([$med_id, $date, $user_id]);
         Database::close();
+        $stmt->execute([$med_id, $date, $user_id]);
     }
 }
-l;
