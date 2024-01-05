@@ -12,8 +12,9 @@ class User
         $db = Database::connect();
         $query = $db->prepare('SELECT * FROM user ');
         $query->execute();
-        return $query->fetchAll(\PDO::FETCH_ASSOC);
         Database::close();
+        return $query->fetchAll(\PDO::FETCH_ASSOC);
+        
     }
 
     public  function  delete($id)
@@ -21,8 +22,9 @@ class User
         $db = Database::connect();
         $query = $db->prepare('DELETE FROM user WHERE user_id=? ');
         $query->execute([$id]);
-        return $query;
         Database::close();
+        return $query;
+        
     }
     public function add_user($user_name, $password, $email, $role)
     {

@@ -27,6 +27,9 @@ $router->post('/update', UserController::class, 'update');
 
 
 $router->get('/', HomeController::class, 'index');
+$router->get('/gestionMedicament', MedController::class, 'medicamentDisplay');
+$router->get('/gestionVent', VenteController::class, 'ventDisplay');
+
 $router->get('/admin', HomeController::class, 'index');
 $router->post('/register', Authentification::class, 'register');
 $router->get('/login', Authentification::class, 'index');

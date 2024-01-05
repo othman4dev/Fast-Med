@@ -271,33 +271,33 @@
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
-        <ul class="sidebar-nav" id="sidebar-nav">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link " href="/">
-                    <i class="bi bi-grid"></i>
-                    <span>Gestion User </span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="/ajoutUserEnmagasin">
-                    <i class="bi bi-grid"></i>
-                    <span>Add User Magasin</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="QuesRepo.php">
-                    <i class="bi bi-grid"></i>
-                    <span>Gestion Medicament</span>
-                </a>
-            </li>
-            <li class="nav-item ">
-                <a class="nav-link collapsed" href="utlisateurs.php">
-                    <i class="bi bi-grid"></i>
-                    <span>Gestion Vent </span>
-                </a>
-            </li>
-        </ul>
+    <li class="nav-item">
+        <a class="nav-link " href="/">
+        <i class="bi bi-grid"></i>
+        <span>Gestion User </span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="/ajoutUserEnmagasin">
+        <i class="bi bi-grid"></i>
+        <span>Add User Magasin</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="/gestionMedicament">
+        <i class="bi bi-grid"></i>
+        <span>Gestion Medicament</span>
+        </a>
+    </li>
+    <li class="nav-item ">
+        <a class="nav-link collapsed" href="/gestionVent">
+        <i class="bi bi-grid"></i>
+        <span>Gestion Vent </span>
+        </a>
+    </li>
+    </ul>
 
     </aside>
 

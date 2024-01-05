@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Controller;
 
 use App\Models\Medicament;
 use App\Models\VenteEnLign;
@@ -50,6 +51,11 @@ class MedController
         # get medicament info :
         $med = Medicament::fetchOne($med_id);
         echo json_encode(["msg" => "Achat succesful", "data" => $med]);
+    }
+    public function medicamentDisplay(){
+        $medicament = new Medicament();
+        $data['medicament'] = $medicament->allMedicament();
+        Controller::render('admin/medicament',$data);
     }
 
 }
