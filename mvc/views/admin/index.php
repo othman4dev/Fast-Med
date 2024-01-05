@@ -317,12 +317,6 @@
 
 
 
-<a href="/RaportVent" class="btn btn-primary">Raport Vent</a>
-
-<a href="/RapportStock" class="btn btn-primary">Rapport Stock</a>
-
-
-
 
 
 
