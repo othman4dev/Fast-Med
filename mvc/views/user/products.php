@@ -86,9 +86,9 @@ https://templatemo.com/tm-582-tale-seo-agency
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="/" class="active">Home</a></li>
               <li class="scroll-to-section"><a href="#services">Services</a></li>
-              <li class="scroll-to-section"><a href="#projects">Projects</a></li>
+              <li class="scroll-to-section"><a href="/medicaments">Medicaments</a></li>
               <li class="has-sub">
                 <a href="javascript:void(0)">Pages</a>
                 <ul class="sub-menu">
@@ -98,19 +98,19 @@ https://templatemo.com/tm-582-tale-seo-agency
               </li>
               <li class="scroll-to-section"><a href="#infos">Infos</a></li>
               <?php
-                if(isset($_SESSION['id'])){
-                  ?> 
-                    <li class="scroll-to-section"><a href="/logout">Logout</a></li>
-                  <?php
-                }else{
-                  ?>
-                    <li class="scroll-to-section"><a href="/login">Login</a></li>
-                  <?php
-                }
-                
-                
-                
-                ?>
+              if (isset($_SESSION['id'])) {
+              ?>
+                <li class="scroll-to-section"><a href="/logout">Logout</a></li>
+              <?php
+              } else {
+              ?>
+                <li class="scroll-to-section"><a href="/login">Login</a></li>
+              <?php
+              }
+
+
+
+              ?>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>

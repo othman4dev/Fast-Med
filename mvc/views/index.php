@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <title>Tale SEO Agency CSS Template by TemplateMo website</title>
+  <title>Tale SEO Agency CSS Template by TemplateMo website</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="user/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="user/assets/css/fontawesome.css">
-    <link rel="stylesheet" href="user/assets/css/templatemo-tale-seo-agency.css">
-    <link rel="stylesheet" href="user/assets/css/owl.css">
-    <link rel="stylesheet" href="user/assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="user/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="user/assets/css/templatemo-tale-seo-agency.css">
+  <link rel="stylesheet" href="user/assets/css/owl.css">
+  <link rel="stylesheet" href="user/assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!--
 
 TemplateMo 582 Tale SEO Agency
 
 https://templatemo.com/tm-582-tale-seo-agency
 
 -->
-  </head>
+</head>
 
 <body>
 
@@ -75,51 +75,51 @@ https://templatemo.com/tm-582-tale-seo-agency
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <img src="user/assets/images/logo.svg" alt="" style="max-width: 100px;">
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                      <li class="scroll-to-section"><a href="#services">Services</a></li>
-                      <li class="scroll-to-section"><a href="#projects">Projects</a></li>
-                      <li class="has-sub">
-                          <a href="javascript:void(0)">Pages</a>
-                          <ul class="sub-menu">
-                              <li><a href="/medicaments">Medicament</a></li>
-                              <li><a href="faqs.html">FAQs</a></li>
-                          </ul>
-                      </li>
-                      <li class="scroll-to-section"><a href="#infos">Infos</a></li>
-                      <?php
-                      if(isset($_SESSION['id'])){
-                        ?> 
-                         <li class="scroll-to-section"><a href="/logout">Logout</a></li>
-                        <?php
-                      }else{
-                        ?>
-                         <li class="scroll-to-section"><a href="/login">Login</a></li>
-                        <?php
-                      }
-                      
-                      
-                      
-                      ?>
-                     
-                     
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="user/assets/images/logo.svg" alt="" style="max-width: 100px;">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="/medicaments">Medicaments</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Pages</a>
+                <ul class="sub-menu">
+                  <li><a href="/medicaments">Medicament</a></li>
+                  <li><a href="faqs.html">FAQs</a></li>
+                </ul>
+              </li>
+              <li class="scroll-to-section"><a href="#infos">Infos</a></li>
+              <?php
+              if (isset($_SESSION['id'])) {
+              ?>
+                <li class="scroll-to-section"><a href="/logout">Logout</a></li>
+              <?php
+              } else {
+              ?>
+                <li class="scroll-to-section"><a href="/login">Login</a></li>
+              <?php
+              }
+
+
+
+              ?>
+
+
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
         </div>
+      </div>
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
@@ -150,9 +150,10 @@ https://templatemo.com/tm-582-tale-seo-agency
             <div class="col-lg-12">
               <div class="section-heading">
                 <h2>We Provide <em>Different Services</em> &amp;
-                  <span>Features</span> For Your Agency</h2>
-                  <div class="line-dec"></div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
+                  <span>Features</span> For Your Agency
+                </h2>
+                <div class="line-dec"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
               </div>
             </div>
             <div class="col-lg-6 col-sm-6">
@@ -193,7 +194,7 @@ https://templatemo.com/tm-582-tale-seo-agency
     </div>
   </div>
   <div class="container" style="display: flex;align-items: center;justify-content: center;width: 100%;">
-      <div class="main-button"><a href="#services">Get Started</a></div><!-- href to login -->
+    <div class="main-button"><a href="#services">Get Started</a></div><!-- href to login -->
   </div>
   <div class="projects section" id="projects">
     <div class="container">
@@ -205,7 +206,7 @@ https://templatemo.com/tm-582-tale-seo-agency
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
           </div>
         </div>
-      </div> 
+      </div>
     </div>
     <div class="container-fluid">
       <div class="row">
@@ -338,7 +339,7 @@ https://templatemo.com/tm-582-tale-seo-agency
                     </div>
                     <div class="col-lg-6">
                       <fieldset>
-                        <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
+                        <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
                       </fieldset>
                     </div>
                     <div class="col-lg-12">
@@ -387,9 +388,10 @@ https://templatemo.com/tm-582-tale-seo-agency
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2036 <a href="#">Tale SEO Agency</a>. All rights reserved. 
-        
-        <br>Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+        <p>Copyright © 2036 <a href="#">Tale SEO Agency</a>. All rights reserved.
+
+          <br>Design: <a href="https://templatemo.com" target="_blank">TemplateMo</a>
+        </p>
       </div>
     </div>
   </footer>
@@ -407,6 +409,6 @@ https://templatemo.com/tm-582-tale-seo-agency
   <script src="user/assets/js/custom.js"></script>
 
 
-  </body>
+</body>
 
 </html>
